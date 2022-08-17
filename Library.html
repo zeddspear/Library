@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="library.css">
+    <script src="library.js" defer></script>
+    <title>My Library</title>
+</head>
+<body>
+    
+    <!--Head Start-->
+    <div class="head">
+        <div class="left">
+            <span class="logo"><img class="logosvg" src="logo\logo.svg" alt="logo"></span>
+            <span class="logo-span">BookHub</span>
+        </div>
+        <div class="addbook-btn">
+            <span>Add Book</span>
+            <button class="add-book" type="button" id="add-btn" ><i class="fa-solid fa-plus"></i></button>
+        </div>
+    </div>
+    <!--Head End-->
+
+    <!--Add books here-->
+    
+<div class="container">
+    <div class="overlay" id="overlay"></div>
+    <div class="shelf" id="shelf">
+          
+</div>
+   
+
+
+</div>
+<!--Popup form start-->
+<section class="pop-up" id="pop-up">
+<div class="container2" id="container2">
+    <div class="close">
+        <button id="close" type="button"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+<form action="/" method="get" id="form">
+    <h3>New Book</h3>
+
+    <label for="book">Book Name:</label>
+    <br>
+    <input type="text" id="book" name="book" placeholder="Book" autocomplete="off" required>
+    <br>
+    <label for="author">Author:</label>
+    <br>
+    <input type="text" id="author" name="author" placeholder="Author" autocomplete="off" required>
+    <br>
+    <label for="pages">Number of Pages:</label>
+    <br>
+    <input type="number" id="pages" name="pages" placeholder="0" autocomplete="off" min="0"  required>
+    <br>
+    <label for="read">Have You Read The Book?</label>
+    <br>
+    <select name="read" id="read">
+        <option value="Yes">Yes😊</option>
+        <option value="No">No😭</option>
+    </select>
+    <br>
+    <button class="submit" type="button" id="submit">Add</button>
+
+</form>
+</div>
+
+</section>
+<!--Pop up form end-->
+    
+<!--Foot start-->
+<div class="foot">
+   <span>Zeddspear Library</span><i class="fa-solid fa-copyright"></i>
+</div>
+<!--foot end-->
+
+</body>
+</html>

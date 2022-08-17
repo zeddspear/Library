@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&family=Nunito+Sans&display=swap');
+
+
+:root{
+    --skin : #fae5df;
+    --lightpink: #f5cac2;
+    --darkpink: #ed7966;
+    --purple: #303179;
+    --darkpurple: #141850;
+}
+
+
+
+
+*,*::after,*::before{
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+body{
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: var(--skin);
+    position: relative;
+    min-height: 100vh;
+    
+}
+
+/*Head styling start*/ 
+.head{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--purple);
+    min-height: 8vh;
+}
+.addbook-btn {
+    display: flex;
+    gap: 10px;
+    font-size: large;
+    color: var(--skin);
+}
+
+.logo img{
+    margin-top: 12px;
+    width: 10em;
+    height: 5em;
+    margin-right: -50px;
+}
+
+.logo-span{
+    font-size: 2rem;
+    color: var(--lightpink);
+    font-family: 'DynaPuff', cursive;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.addbook-btn button {
+    border: none;
+    background-color: var(--skin);
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 3px 12px 3px 12px ;
+}
+
+.addbook-btn button:active{
+    transform: scale(0.95);
+}
+.addbook-btn button:hover{
+    background-color: var(--lightpink);
+}
+
+/*Head styling end*/
+
+/*Pop-up section start*/
+.pop-up{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+    
+}
+
+.container2{
+    top: 10%;
+    position: fixed;
+    transform: scale(0);
+    transition: 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 20px 40px 20px 40px;
+    border-radius: 8px;
+    background-color: var(--darkpink);
+    z-index: 10000;
+    box-shadow: 2px 2px 2px var(--darkpurple);
+}
+
+
+.container2 h3 {
+    text-align: center;
+    margin: 0px 0px 20px 0px ;
+    font-size: 2rem;
+    font-family: 'DynaPuff', cursive;
+}
+
+#form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+
+
+#form input,
+#form select{
+    margin-top: -20px;
+    width: 100%;
+    border: 0;
+    display: block;
+    outline: 0;
+    background-color: var(--lightpink);
+    padding: 5px;
+    font-size: 1rem;
+    border-radius: 5px;
+    font-family: inherit;
+}
+.close{
+    margin-right: -20px;
+}
+.close button{
+    font-size: 1rem;
+    padding:  3px 12px 3px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--lightpink);
+    cursor: pointer;
+}
+
+.close button:active{
+    transform: scale(0.97);
+}
+.close button:hover{
+    background-color: var(--skin);
+}
+
+.submit{
+    background-color: var(--purple);
+    color: var(--lightpink);
+    padding: 8px 12px 8px 12px;
+    border: none;
+    cursor: pointer;
+}
+.submit:active{
+    transform: scale(0.98);
+}
+.submit:hover{
+    background-color: var(--darkpurple);
+}
+/*overlay*/
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: 0.5s ease;
+    background: rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+    opacity: 0;
+    
+}
+
+/*Pop-up section end*/
+
+
+
+/*Add book section start*/
+
+
+.shelf{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 100px;
+    justify-content: center;
+    flex: 1;
+    max-width: 1000;
+    margin-top: 10%;
+}
+
+.book{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+   padding: 0px 0px 50px 0px ;
+    border-radius: 10px;
+    background-color: var(--lightpink);
+    font-size: 1rem;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 2px var(--darkpurple);
+    text-align: center;
+    
+}
+.book h3 {
+    background-color: var(--purple);
+    color: var(--skin);
+    padding: 30px 30px 5px 30px ;
+    margin: 0px;
+    min-width: 100%; 
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    font-family: 'DynaPuff', cursive ;
+}
+
+.book p{
+    border-bottom: 1px solid black;
+    width: 100%;
+}
+
+
+.buttons{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.buttons button {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 8px 0px 8px 0px;
+    width: 150px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: inherit;
+    font-weight: 700;
+    border-radius: 5px ;
+
+}
+
+.Yes{
+    background-color: rgb(48, 85, 11);
+    color: var(--skin);
+}
+
+
+.Yes:active{
+    transform: scale(0.98);
+}
+
+
+
+
+
+
+
+
+.delete{
+    background-color: rgba(104, 0, 0, 0.74);
+    color: var(--skin);
+}
+
+.delete:active{
+    transform: scale(0.98);
+}
+
+.delete:hover{
+    background-color:rgba(116, 8, 8, 0.74);
+}
+/*Add book section end*/
+
+/*foot style start*/
+.foot{
+text-align: center;
+    background-color: var(--purple);
+    position: fixed;
+    width: 100vw;
+    bottom: 0%;
+    color: var(--lightpink);
+    padding: 5px 0px 0px 0px ;
+}
+.foot span {
+    font-size: 17px;
+}
+
+
+.foot i {
+    font-size: 15px;
+    margin-left: 10px;
+    color: var(--darkpink);
+}
+/*foot end*/
+
